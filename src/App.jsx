@@ -10,6 +10,7 @@ import Login from './pages/Login';
 import Dashboard from './pages/Dashboard';
 import AppLayout from './components/AppLayout';
 import { Navigate } from 'react-router-dom';
+import Logout from './pages/Logout';
 import { AuthContext } from './context/AuthContext';
 import { useContext } from 'react';
 import { useSelector } from 'react-redux';
@@ -40,6 +41,7 @@ function App() {
                     <Navigate to="/dashboard" /> : 
                     <AppLayout>
                         <Login />
+                        
                     </AppLayout>
                     } 
             />
@@ -49,6 +51,7 @@ function App() {
                     </AppLayout>
                     : <Navigate to="/practice-5" />} 
             />
+            <Route path="/logout" element={<Logout />} />
         </Routes>
     );
 }

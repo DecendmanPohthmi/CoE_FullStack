@@ -12,7 +12,11 @@ function Header() {
             <p>
                 <Link to='/'>Home</Link>
                 {" "}
-                <Link to='/practice-5'>Login</Link>
+                {user ? (
+                    <Link to='/logout'>Logout</Link>
+                ) : (
+                    <Link to='/practice-5'>Login</Link>
+                )}
                 {" "}
                 {" "}
                 {" "}
